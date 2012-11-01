@@ -55,6 +55,10 @@
                 </ul>
             </div>-->
 
+            <div class="arrow left"></div>
+
+            <div class="arrow right"></div>
+
         </div> <!--main-content-container-->
 
         <footer id="footer-home">
