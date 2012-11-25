@@ -1,20 +1,53 @@
+<?php 
+
+$prefix="";
+
+include($prefix."static/connect_database.php");
+$home_flag=1;
+
+$get_list =mysql_query("
+	SELECT * from tbl_home
+	ORDER BY order_	
+
+",$con);
+
+if (mysql_num_rows($get_list)!=null){
+	
+	$filename = array();
+	$link = array();
+	for ($counter=1;$counter<=mysql_num_rows($get_list);$counter++){
+		$get_list_array=mysql_fetch_array($get_list);
+		array_push($filename,$get_list_array["filename"]);
+		array_push($link,$get_list_array["link"]);
+		
+	}
+		
+}
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
-    	<?php $prefix="";?>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Island Creamery | Contact Us</title>
-        <meta name="description" content="">
+    	<?php $page_title="";
+			include($prefix."static/page_head.php");
+		;?>
+        
 		<!--[if lt IE 9]>
 			<script src="<?php echo $prefix;?>js/html5shiv.js"></script>
 		<![endif]-->
         <link rel="stylesheet" href="<?php echo $prefix;?>css/normalize.css">
         <link rel="stylesheet" href="<?php echo $prefix;?>css/main.css">
         <script src="<?php echo $prefix;?>js/vendor/modernizr-2.6.1.min.js"></script>
+		<script src="<?php echo $prefix;?>js/jquery.js"></script>
+		<script src="<?php echo $prefix;?>js/home.js"></script>
+		
         <script type="text/javascript">
 		  var _gaq = _gaq || [];
 		  _gaq.push(['_setAccount', 'xx-xxxxxxxx-x']);
@@ -27,11 +60,39 @@
 		  })();
 		</script>
     </head>
-    <body id="contact">
+    <body onload="initialization()">
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
+		<!--<a id="background-link" href="<?php echo $link[0];?>">-->
+		<div class="background" id="background-front"></div>
+		<div class="background" id="background-back"></div>
+		<!--</a>-->	
+		
+		<style type="text/css">
+		#background-front{
+			background-image:url(<?php echo $prefix.$filename[0];?>); 
+		}
+		
+		#background-back{
+			background-image:url(<?php echo $prefix.$filename[1];?>); 
+			opacity:0;
+		}
+		
+		</style>
 
+
+		<?php
+		$link_ = current($link);
+		$i=0;
+		foreach ($filename as $filename_){
+			echo '<div class="hidden" id="filename_'.$i.'">'.$filename_.'</div>';
+			echo '<div class="hidden" id="link_'.$i.'">'.$link_.'</div>';
+			$i++;
+			$link_ = next($link);
+		}
+		echo '<div class="hidden" id="total_image">'.$i.'</div>';
+		?>
         <header style="height:32px; background: #000">
             <div style="height:58px" class="hidden">
                 <div class="header-container">
@@ -55,9 +116,9 @@
                 </ul>
             </div>-->
 
-            <div class="arrow left"></div>
+            <div class="arrow left" onclick="prev()"></div>
 
-            <div class="arrow right"></div>
+            <div class="arrow right" onclick="next()"></div>
 
         </div> <!--main-content-container-->
 
@@ -93,7 +154,7 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
         <script src="<?php echo $prefix;?>js/plugins.js"></script>
-        <script src="<?php echo $prefix;?>js/main.js"></script>
+        <!--<script src="<?php echo $prefix;?>js/main.js"></script>-->
 
     </body>
 </html>
