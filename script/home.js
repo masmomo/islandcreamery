@@ -7,7 +7,7 @@ var slideshow_counter, total_slideshow,slideshow_timer;
 
 function initialization(){
 	slideshow_counter=1;
-	total_slideshow = document.getElementById("slideshow_total").innerHTML;
+	total_slideshow = document.getElementById("total_image").innerHTML;
 	
 	//var dot_width = Math.floor((1020 - ((total_slideshow-1)*3))/total_slideshow);
 	
