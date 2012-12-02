@@ -165,13 +165,15 @@ echo '></a>'; }
 <div class="menu-content" style="margin-top: 10px">
 <div class="header" id="dessert">
   <h1><?php echo $title_read[$counter];?></h1>
+
 </div>
 
 <div class="content">
   <div class="description"><?php echo $description_read[$counter];?></div>
 </div>
-<?php } ?>
 </div>
+<?php } ?>
+
 </div>
 </div>
 
