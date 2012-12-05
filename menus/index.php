@@ -32,7 +32,9 @@ if (mysql_num_rows($get_menus)!=null) {
 	for ($counter=1;$counter<=mysql_num_rows($get_menus);$counter++) {
 		$get_menus_array = mysql_fetch_array($get_menus);
 		$type = $get_menus_array["type"];
-		$menus[$type]=$get_menus_array["fill"]; } }
+		$menus[$type]=$get_menus_array["fill"]; 
+	} 
+}
 
 $get_read = mysql_query("SELECT * from tbl_menus_content ORDER BY order_",$con); 
 
@@ -42,7 +44,9 @@ if (mysql_num_rows($get_read)!=null) {
 	for ($counter=1;$counter<=mysql_num_rows($get_read);$counter++) {
 		$get_read_array=mysql_fetch_array($get_read);
 		array_push($title_read,$get_read_array["title_read"]);
-		array_push($description_read,$get_read_array["description_read"]); } }
+		array_push($description_read,$get_read_array["description_read"]); 
+	} 
+}
 ?>
 
 <!DOCTYPE html>
