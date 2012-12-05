@@ -17,8 +17,8 @@ if(mysql_num_rows($get_info)!=null) {
 
 <footer>
     <div class="footer-content" style="font-size: .825em">
-        <ul>
-            <a href=""><li>© <?php echo $info["website_name"];?> Site by Antikode.</li></a>
+        <ul style="color: #fff">
+            <li>© <?php echo $info["website_name"];?> Site by <a href="http://www.antikode.com">Antikode</a>.</li>
         </ul>
     </div>
 </footer>

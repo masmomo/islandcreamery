@@ -116,9 +116,9 @@ if (mysql_num_rows($get_list)!=null){
                 </ul>
             </div>-->
 
-            <div class="arrow left" onclick="prev()"></div>
+            <div class="arrow left hidden" onclick="prev()"></div>
 
-            <div class="arrow right" onclick="next()"></div>
+            <div class="arrow right hidden" onclick="next()"></div>
 
         </div> <!--main-content-container-->
 
