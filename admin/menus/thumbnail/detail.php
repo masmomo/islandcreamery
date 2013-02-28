@@ -67,7 +67,7 @@ include($prefix."static/page_head.php");
 
 		echo '<div class="form_1_auto">';
 		echo '<div class="fill_row">';
-		echo '<div class="fill_label_image">Image <br/></div> ';
+		echo '<div class="fill_label_image">Image <br/><i style="font-size:11px">(304 x 200 px transparent .PNG)</i></div> ';
 		echo '<input type="button" class="left_ h22_button grey_button button" value="Browse File" onClick="selectFile(\'image_file_\')" />';
 
 		echo '<div class="form_5_auto">';

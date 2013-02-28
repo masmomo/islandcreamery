@@ -148,9 +148,9 @@ echo '></a>'; }
 <!--menu-banner-->
     
 <div class="menu-content" style="margin-top: 10px">
-<div class="header" id="ice-cream">
+<!--<div class="header" id="ice-cream">
   <h1><?php echo $menus["title"];?></h1>
-</div>
+</div>-->
       
 <div class="content">
 <?php for ($counter=0;$counter<>mysql_num_rows($get_thumb);$counter++) { ?>
@@ -161,12 +161,12 @@ echo '></a>'; }
 
 <div class="description">
   <p><?php echo $menus["description"];?></p>
-  <img src="<?php echo $menus["image"];?>" width="720" height="1016"> </div>
+  <img src="<?php echo $menus["image"];?>" width="720" height="1905"> </div>
 </div>
 </div>
 
 <?php for ($counter=0;$counter<>mysql_num_rows($get_read);$counter++) { ?>
-<div class="menu-content" style="margin-top: 10px">
+<!--<div class="menu-content" style="margin-top: 10px">
 <div class="header" id="dessert">
   <h1><?php echo $title_read[$counter];?></h1>
 
@@ -178,7 +178,7 @@ echo '></a>'; }
 </div>
 <?php } ?>
 
-</div>
+</div>-->
 </div>
 
 <!--main-content-container-->

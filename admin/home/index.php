@@ -77,7 +77,7 @@ $( "#sortable" ).disableSelection();
         <div class="fill_group">
           <div class="fill_row">
             <div class="fill_title">Home Image Slideshow</div>
-            <div class="image_size">(px)</div>
+            <div class="image_size">(1.200 x 800 px)</div>
           </div>
           <ul id="sortable">
             <?php
