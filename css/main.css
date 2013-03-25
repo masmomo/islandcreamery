@@ -421,8 +421,8 @@ nav ul {
 nav ul li {
 	display: inline;
 	margin:0;
-	
 }
+
 nav a {
 	float: left;
 	text-decoration: none;
@@ -439,9 +439,11 @@ nav a {
 nav a:hover {
 	background: #7d1a25;
 }
+
 nav a.selected {
 	background: #7d1a25;
 }
+
 footer {
 	font-family: 'solexregular';
 	font-size: 1em;

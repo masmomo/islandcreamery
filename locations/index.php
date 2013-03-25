@@ -59,7 +59,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 <header>
   <div id="top">
     <div class="header-container">
-      <h1 class="logo ir">Island Creamery</h1>
+      <a href="<?php echo $prefix;?>index.php"><h1 class="logo ir">Island Creamery</h1></a>
     </div>
   </div>
   <div id="mid">
