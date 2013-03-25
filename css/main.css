@@ -881,7 +881,7 @@ footer#footer-home {
 
 .about-content {
 	font-family: 'solexregular';
-	background: rgba(255,255,255,0.85) url(../img/divider.png) repeat-x;
+	background: rgba(255,255,255,0.85) url(../img/divider-red.png) repeat-x;
 	background-position: 0 10px;
 	padding: 60px 40px 40px 40px;
 	margin-top: 20px;
@@ -904,7 +904,8 @@ footer#footer-home {
 	color: #981f2d;
 	text-align: center;
 	font-size: 30px;
-	font-family: 'solexbold';
+	font-family: 'solexbold', Helvetica, Arial, sans-serif;
+	margin-bottom: 30px;
 }
 
 .about-content {

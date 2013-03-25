@@ -66,13 +66,12 @@ if(mysql_num_rows($get_about)!=null) {
 		$about[$type] = $get_about_array["fill"]; } }
 ?>
 
-<div class="main-content-red"></div>
 <div class="main-content-container">
   <div class="main-content">
     <div class="about-content">
       <div class="about-logo hidden"></div>
-      <div class="about-header ">WHO WE ARE</div>
-      <div class="about-content"> <?php echo $about['description']; ?> </div>
+      <div class="about-header">WHO WE ARE</div>
+      <div> <?php echo $about['description']; ?> </div>
     </div>
   </div>
 </div>
